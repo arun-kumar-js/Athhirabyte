@@ -1,8 +1,10 @@
+import { useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
 import '../App.css'
 
 function Layout({ children }) {
   const location = useLocation()
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   const isActive = (path) => location.pathname === path
 
@@ -16,17 +18,26 @@ function Layout({ children }) {
             <span className="nav-subtitle">International IT Training & Placement</span>
           </div>
         </Link>
-        <nav className="nav-links">
-          <Link to="/courses" className={isActive('/courses') ? 'active' : ''}>
+        <button 
+          className="mobile-menu-toggle"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <nav className={`nav-links ${mobileMenuOpen ? 'mobile-open' : ''}`}>
+          <Link to="/courses" className={isActive('/courses') ? 'active' : ''} onClick={() => setMobileMenuOpen(false)}>
             Courses
           </Link>
-          <Link to="/about" className={isActive('/about') ? 'active' : ''}>
+          <Link to="/about" className={isActive('/about') ? 'active' : ''} onClick={() => setMobileMenuOpen(false)}>
             Why Us
           </Link>
-          <Link to="/contact" className={isActive('/contact') ? 'active' : ''}>
+          <Link to="/contact" className={isActive('/contact') ? 'active' : ''} onClick={() => setMobileMenuOpen(false)}>
             Contact
           </Link>
-          <button className="nav-cta">Get Brochure</button>
+          <button className="nav-cta" onClick={() => setMobileMenuOpen(false)}>Get Brochure</button>
         </nav>
       </header>
 

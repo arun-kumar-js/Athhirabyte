@@ -16,6 +16,20 @@ function Home() {
             Master Full Stack, Data Science, Testing, and Cloud with real-time industry mentors. 
             Learn on an international-level curriculum that makes you job‑ready from Day 1.
           </p>
+          <div className="hero-image-container">
+            <img 
+              src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&h=500&fit=crop&q=80" 
+              alt="Students learning at AthhiraByte Academy" 
+              className="hero-image"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'flex';
+              }}
+            />
+            <div className="image-placeholder" style={{ display: 'none' }}>
+              🎓 Students Learning Together
+            </div>
+          </div>
           <div className="hero-actions">
             <button className="primary-btn">Book Free Counselling</button>
             <button className="ghost-btn">Download Course Catalog</button>
@@ -79,6 +93,18 @@ function Home() {
 
         <div className="cards-grid">
           <article className="course-card">
+            <div className="course-image-container">
+              <img 
+                src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400&h=250&fit=crop&q=80" 
+                alt="Full Stack Development" 
+                className="course-image"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'flex';
+                }}
+              />
+              <div className="image-placeholder" style={{ display: 'none' }}>💻</div>
+            </div>
             <p className="course-label">Most Popular</p>
             <h3>Full Stack Developer - MERN / .NET / Java</h3>
             <p className="course-meta">6 Months • Live + Lab • Placement Track</p>
@@ -91,6 +117,18 @@ function Home() {
           </article>
 
           <article className="course-card">
+            <div className="course-image-container">
+              <img 
+                src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop&q=80" 
+                alt="Data Science & Machine Learning" 
+                className="course-image"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'flex';
+                }}
+              />
+              <div className="image-placeholder" style={{ display: 'none' }}>📊</div>
+            </div>
             <p className="course-label">Data Careers</p>
             <h3>Data Science & Machine Learning</h3>
             <p className="course-meta">5 Months • Python • Real Datasets</p>
@@ -103,6 +141,18 @@ function Home() {
           </article>
 
           <article className="course-card">
+            <div className="course-image-container">
+              <img 
+                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop&q=80" 
+                alt="Software Testing" 
+                className="course-image"
+                onError={(e) => {
+                  e.target.style.display = 'none';
+                  e.target.nextSibling.style.display = 'flex';
+                }}
+              />
+              <div className="image-placeholder" style={{ display: 'none' }}>🔍</div>
+            </div>
             <p className="course-label">High Demand</p>
             <h3>Software Testing with Selenium</h3>
             <p className="course-meta">3 Months • Manual + Automation</p>
@@ -171,6 +221,14 @@ function Home() {
 
         <div className="reviews-grid">
           <article className="review-card">
+            <img 
+              src="https://i.pravatar.cc/150?img=12" 
+              alt="Akshay Kumar" 
+              className="review-avatar"
+              onError={(e) => {
+                e.target.style.display = 'none';
+              }}
+            />
             <p className="review-text">
               "AthhiraByte's Full Stack program gave me exactly what I needed – practical projects, 
               strong fundamentals and continuous interview support. I cracked my dream role in 90 days."
@@ -179,6 +237,14 @@ function Home() {
             <p className="review-role">Full Stack Developer, Product Company in Bangalore</p>
           </article>
           <article className="review-card">
+            <img 
+              src="https://i.pravatar.cc/150?img=47" 
+              alt="Shreya Menon" 
+              className="review-avatar"
+              onError={(e) => {
+                e.target.style.display = 'none';
+              }}
+            />
             <p className="review-text">
               "The Data Science course content is truly international standard. The mentors helped me 
               build a portfolio that stood out to recruiters in India and abroad."

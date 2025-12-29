@@ -7,6 +7,7 @@ function Courses() {
       title: 'Full Stack Developer - MERN / .NET / Java',
       duration: '6 Months',
       type: 'Live + Lab • Placement Track',
+      image: 'https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=300&fit=crop&q=80',
       description: 'Master end-to-end web development with industry-standard frameworks and tools.',
       features: [
         'Build 5+ production-ready applications',
@@ -22,6 +23,7 @@ function Courses() {
       title: 'Data Science & Machine Learning',
       duration: '5 Months',
       type: 'Python • Real Datasets',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=300&fit=crop&q=80',
       description: 'Transform data into insights with advanced analytics and machine learning models.',
       features: [
         'Statistics, ML, SQL, Power BI / Tableau',
@@ -37,6 +39,7 @@ function Courses() {
       title: 'Software Testing with Selenium',
       duration: '3 Months',
       type: 'Manual + Automation',
+      image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=300&fit=crop&q=80',
       description: 'Become a QA expert with hands-on automation testing skills.',
       features: [
         'Manual, Automation, API and Agile Testing',
@@ -52,6 +55,7 @@ function Courses() {
       title: 'Python / Java / .NET Development',
       duration: '4 Months',
       type: 'Backend Focus • Enterprise Apps',
+      image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&h=300&fit=crop&q=80',
       description: 'Build scalable backend systems and enterprise applications.',
       features: [
         'Object-oriented programming mastery',
@@ -67,6 +71,7 @@ function Courses() {
       title: 'Power BI / Tableau - Business Intelligence',
       duration: '2.5 Months',
       type: 'Visualization • Dashboards',
+      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=300&fit=crop&q=80',
       description: 'Create compelling data visualizations and business intelligence dashboards.',
       features: [
         'Data modeling & ETL processes',
@@ -82,6 +87,7 @@ function Courses() {
       title: 'AWS / Azure Cloud & DevOps',
       duration: '4 Months',
       type: 'Cloud Infrastructure • CI/CD',
+      image: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&h=300&fit=crop&q=80',
       description: 'Master cloud platforms and DevOps practices for modern software delivery.',
       features: [
         'Cloud architecture & services',
@@ -121,6 +127,21 @@ function Courses() {
         <div className="courses-detailed">
           {courses.map((course, index) => (
             <article key={index} className="course-card-detailed">
+              <div className="course-image-container">
+                <img 
+                  src={course.image} 
+                  alt={course.title} 
+                  className="course-image"
+                  style={{ height: '220px' }}
+                  onError={(e) => {
+                    e.target.style.display = 'none';
+                    e.target.nextSibling.style.display = 'flex';
+                  }}
+                />
+                <div className="image-placeholder" style={{ display: 'none', height: '220px' }}>
+                  📚 Course Image
+                </div>
+              </div>
               <div className="course-header-detailed">
                 <p className="course-label">{course.label}</p>
                 <h3>{course.title}</h3>

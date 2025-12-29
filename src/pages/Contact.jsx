@@ -47,12 +47,21 @@ function Contact() {
         </div>
 
         <div className="map-placeholder">
+          <img 
+            src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&h=400&fit=crop&q=80" 
+            alt="AthhiraByte Campus Location" 
+            className="about-image"
+            style={{ marginBottom: '12px', borderRadius: '16px' }}
+            onError={(e) => {
+              e.target.style.display = 'none';
+            }}
+          />
           <p className="map-title">Our Chennai Campus</p>
-              <p className="map-subtitle">Embed Google Map / Campus Photo here</p>
-              <p className="map-subtitle" style={{ marginTop: '8px' }}>
-                Address: [Your Campus Address]<br />
-                Chennai, Tamil Nadu, India
-              </p>
+          <p className="map-subtitle">Embed Google Map / Campus Photo here</p>
+          <p className="map-subtitle" style={{ marginTop: '8px' }}>
+            Address: [Your Campus Address]<br />
+            Chennai, Tamil Nadu, India
+          </p>
         </div>
       </section>
 

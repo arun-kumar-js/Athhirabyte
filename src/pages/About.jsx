@@ -13,6 +13,20 @@ function About() {
             We're not just a training institute – we're your bridge to a successful tech career. 
             With 20+ years of excellence, we've helped 45,000+ students land their dream jobs.
           </p>
+          <div className="hero-image-container" style={{ marginTop: '20px' }}>
+            <img 
+              src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=800&h=400&fit=crop&q=80" 
+              alt="AthhiraByte Academy Campus" 
+              className="hero-image"
+              onError={(e) => {
+                e.target.style.display = 'none';
+                e.target.nextSibling.style.display = 'flex';
+              }}
+            />
+            <div className="image-placeholder" style={{ display: 'none' }}>
+              🏢 Our Modern Campus
+            </div>
+          </div>
         </div>
       </section>
 
@@ -102,6 +116,14 @@ function About() {
 
         <div className="reviews-grid">
           <article className="review-card">
+            <img 
+              src="https://i.pravatar.cc/150?img=12" 
+              alt="Akshay Kumar" 
+              className="review-avatar"
+              onError={(e) => {
+                e.target.style.display = 'none';
+              }}
+            />
             <p className="review-text">
               "AthhiraByte's Full Stack program gave me exactly what I needed – practical projects, 
               strong fundamentals and continuous interview support. I cracked my dream role in 90 days."
@@ -110,6 +132,14 @@ function About() {
             <p className="review-role">Full Stack Developer, Product Company in Bangalore</p>
           </article>
           <article className="review-card">
+            <img 
+              src="https://i.pravatar.cc/150?img=47" 
+              alt="Shreya Menon" 
+              className="review-avatar"
+              onError={(e) => {
+                e.target.style.display = 'none';
+              }}
+            />
             <p className="review-text">
               "The Data Science course content is truly international standard. The mentors helped me 
               build a portfolio that stood out to recruiters in India and abroad."
@@ -118,6 +148,14 @@ function About() {
             <p className="review-role">Data Analyst, Global Analytics MNC</p>
           </article>
           <article className="review-card">
+            <img 
+              src="https://i.pravatar.cc/150?img=33" 
+              alt="Rajesh Patel" 
+              className="review-avatar"
+              onError={(e) => {
+                e.target.style.display = 'none';
+              }}
+            />
             <p className="review-text">
               "The placement support was exceptional. They helped me prepare for interviews, 
               negotiate offers, and I landed a role at a Fortune 500 company within 2 months."
@@ -126,6 +164,14 @@ function About() {
             <p className="review-role">Software Engineer, Global Tech MNC</p>
           </article>
           <article className="review-card">
+            <img 
+              src="https://i.pravatar.cc/150?img=20" 
+              alt="Priya Sharma" 
+              className="review-avatar"
+              onError={(e) => {
+                e.target.style.display = 'none';
+              }}
+            />
             <p className="review-text">
               "Best investment I made in my career. The mentors are industry experts and the 
               curriculum is always updated with latest technologies."
